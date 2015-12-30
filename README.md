@@ -12,6 +12,12 @@ px2-remove-attr は、Pickles 2 に、HTMLドキュメントから指定した�
 
 ```
 {
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/tomk79/px2-remove-attr.git"
+        }
+    ],
     "require": {
         "tomk79/px2-remove-attr": "dev-master"
     }
