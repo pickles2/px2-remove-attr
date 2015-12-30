@@ -24,6 +24,9 @@ class main{
 	 */
 	public static function exec( $px, $options = null ){
 		require_once(__DIR__.'/simple_html_dom.php');
+		if( !$px->is_publish_tool() ){
+			return true;
+		}
 
 		if( !@is_array($options->attrs) ){
 			@$options->attrs = array();

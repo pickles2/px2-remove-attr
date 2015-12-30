@@ -13,7 +13,7 @@ class mainTest extends PHPUnit_Framework_TestCase{
 
 
 	/**
-	 * 普通に実行してみるテスト
+	 * 通常のプレビューとして実行してみるテスト
 	 */
 	public function testStandard(){
 		$output = $this->passthru( [
@@ -25,18 +25,39 @@ class mainTest extends PHPUnit_Framework_TestCase{
 		] );
 		// var_dump($output);
 		$this->assertTrue( $this->common_error( $output ) );
-		$this->assertEquals( 0, preg_match('/'.preg_quote(' data-remove-test=', '/').'/is', $output) );
-		$this->assertEquals( 0, preg_match('/'.preg_quote(' data-remove-test>', '/').'/is', $output) );
-		$this->assertEquals( 0, preg_match('/'.preg_quote(' data-remove-2-test', '/').'/is', $output) );
-		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-remove-test-dont-remove', '/').'/is', $output) );
-		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-data-remove-test', '/').'/is', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-remove-test=', '/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-remove-test>', '/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-remove-2-test', '/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-remove-test-dont-remove', '/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-data-remove-test', '/').'/s', $output) );
 
-	}
+	}// testStandard()
 
 	/**
-	 * パブリッシュツールとして実行
+	 * パブリッシュツールとして実行してみるテスト
 	 */
 	public function testAsPublishTool(){
+		$output = $this->passthru( [
+			'php',
+			__DIR__.'/../htdocs/.px_execute.php' ,
+			'-u' ,
+			'Mozilla/5.0(PicklesCrawler)' ,
+			'/' ,
+		] );
+		// var_dump($output);
+		$this->assertTrue( $this->common_error( $output ) );
+		$this->assertEquals( 0, preg_match('/'.preg_quote(' data-remove-test=', '/').'/s', $output) );
+		$this->assertEquals( 0, preg_match('/'.preg_quote(' data-remove-test>', '/').'/s', $output) );
+		$this->assertEquals( 0, preg_match('/'.preg_quote(' data-remove-2-test', '/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-remove-test-dont-remove', '/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote(' data-data-remove-test', '/').'/s', $output) );
+
+	}// testAsPublishTool()
+
+	/**
+	 * パブリッシュを実行
+	 */
+	public function testExecPublish(){
 
 		$output = $this->passthru( [
 			'php',
@@ -55,7 +76,7 @@ class mainTest extends PHPUnit_Framework_TestCase{
 		$this->assertTrue( $this->common_error( $output ) );
 		$this->assertTrue( !is_dir( __DIR__.'/../htdocs/caches/p/' ) );
 
-	}
+	}// testExecPublish()
 
 
 
