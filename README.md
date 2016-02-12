@@ -2,6 +2,7 @@ pickles2/px2-remove-attr
 =========
 
 px2-remove-attr は、Pickles 2 に、HTMLドキュメントから指定した属性を削除する機能を提供します。
+この機能はパブリッシュ実行時に働きます。プレビュー時には作用しません。
 
 
 ## Usage - 使い方
