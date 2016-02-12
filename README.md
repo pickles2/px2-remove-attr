@@ -1,4 +1,4 @@
-tomk79/px2-remove-attr
+pickles2/px2-remove-attr
 =========
 
 px2-remove-attr は、Pickles 2 に、HTMLドキュメントから指定した属性を削除する機能を提供します。
@@ -12,14 +12,8 @@ px2-remove-attr は、Pickles 2 に、HTMLドキュメントから指定した�
 
 ```
 {
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/tomk79/px2-remove-attr.git"
-        }
-    ],
     "require": {
-        "tomk79/px2-remove-attr": "dev-master"
+        "pickles2/px2-remove-attr": "2.*"
     }
 }
 ```
@@ -39,9 +33,17 @@ $ composer update
 
 $conf->funcs->processor->html = [
     // HTML属性を削除する
-    'tomk79\pickles2\remove_attr\main::exec()' ,
+    'tomk79\pickles2\remove_attr\main::exec('.json_encode(array(
+        "attrs"=>array(
+            'data-remove-test',
+            'data-remove-2-test',
+        ) ,
+    )).')' ,
 ];
 ```
+
+HTMLタグから、`attrs` に指定した属性を削除します(タグごと削除するのではなく、属性だけ削除します)。
+`attrs` は配列です。複数の属性を指定できます。
 
 
 ## 開発者向け情報 - for Developer
