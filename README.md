@@ -14,7 +14,7 @@ px2-remove-attr は、Pickles 2 に、HTMLドキュメントから指定した�
 ```
 {
     "require": {
-        "pickles2/px2-remove-attr": "2.*"
+        "pickles2/px2-remove-attr": "^2.0.0"
     }
 }
 ```
@@ -55,3 +55,25 @@ HTMLタグから、`attrs` に指定した属性を削除します(タグごと�
 $ cd {$documentRoot}
 $ composer test
 ```
+
+## 更新履歴 - Change log
+
+### pickles2/px2-remove-attr 2.0.1 (未定)
+
+- 0バイトのコンテンツがある場合に Fatal Error が起きる不具合を修正した。
+
+### pickles2/px2-remove-attr 2.0.0 (2016年2月12日)
+
+- initial release.
+
+## ライセンス - License
+
+Copyright (c)2001-2018 Tomoya Koyanagi, and Pickles 2 Project<br />
+MIT License https://opensource.org/licenses/mit-license.php
+
+
+## 作者 - Author
+
+- Tomoya Koyanagi <tomk79@gmail.com>
+- website: <http://www.pxt.jp/>
+- Twitter: @tomk79 <http://twitter.com/tomk79/>

@@ -47,14 +47,16 @@ class main{
 				DEFAULT_BR_TEXT, // $defaultBRText
 				DEFAULT_SPAN_TEXT // $defaultSpanText
 			);
-			foreach( $options->attrs as $attr ){
-				$ret = $html->find('*['.$attr.']');
-				foreach( $ret as $retRow ){
-					// var_dump($retRow->$attr);
-					$retRow->$attr = null;
+			if( $html ){
+				foreach( $options->attrs as $attr ){
+					$ret = $html->find('*['.$attr.']');
+					foreach( $ret as $retRow ){
+						// var_dump($retRow->$attr);
+						$retRow->$attr = null;
+					}
 				}
+				$src = $html->outertext;
 			}
-			$src = $html->outertext;
 
 			$px->bowl()->replace( $src, $key );
 		}
