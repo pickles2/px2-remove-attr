@@ -11,7 +11,7 @@ px2-remove-attr は、Pickles 2 に、HTMLドキュメントから指定した�
 
 ### 2. composer.json に追記
 
-```
+```json
 {
     "require": {
         "pickles2/px2-remove-attr": "^2.0.0"
@@ -57,6 +57,10 @@ $ composer test
 ```
 
 ## 更新履歴 - Change log
+
+### pickles2/px2-remove-attr 2.0.2 (2018年8月30日)
+
+- 細かい不具合の修正。
 
 ### pickles2/px2-remove-attr 2.0.1 (2018年3月16日)
 
