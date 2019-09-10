@@ -18,7 +18,7 @@ class mainTest extends PHPUnit_Framework_TestCase{
 	public function testStandard(){
 		$output = $this->passthru( [
 			'php',
-			__DIR__.'/../htdocs/.px_execute.php' ,
+			__DIR__.'/testdata/src_px2/.px_execute.php' ,
 			'-u' ,
 			'Mozilla/5.0' ,
 			'/' ,
@@ -39,7 +39,7 @@ class mainTest extends PHPUnit_Framework_TestCase{
 	public function testAsPublishTool(){
 		$output = $this->passthru( [
 			'php',
-			__DIR__.'/../htdocs/.px_execute.php' ,
+			__DIR__.'/testdata/src_px2/.px_execute.php' ,
 			'-u' ,
 			'Mozilla/5.0(PicklesCrawler)' ,
 			'/' ,
@@ -61,7 +61,7 @@ class mainTest extends PHPUnit_Framework_TestCase{
 
 		$output = $this->passthru( [
 			'php',
-			__DIR__.'/../htdocs/.px_execute.php' ,
+			__DIR__.'/testdata/src_px2/.px_execute.php' ,
 			'/?PX=publish.run' ,
 		] );
 		// var_dump($output);
@@ -69,12 +69,12 @@ class mainTest extends PHPUnit_Framework_TestCase{
 
 		// 後始末
 		$output = $this->passthru( [
-			'php', __DIR__.'/../htdocs/.px_execute.php', '/?PX=clearcache'
+			'php', __DIR__.'/testdata/src_px2/.px_execute.php', '/?PX=clearcache'
 		] );
 
 		clearstatcache();
 		$this->assertTrue( $this->common_error( $output ) );
-		$this->assertTrue( !is_dir( __DIR__.'/../htdocs/caches/p/' ) );
+		$this->assertTrue( !is_dir( __DIR__.'/testdata/src_px2/caches/p/' ) );
 
 	}// testExecPublish()
 
