@@ -58,30 +58,30 @@ $ composer test
 
 ## 更新履歴 - Change log
 
-### pickles2/px2-remove-attr 2.0.3 (リリース日未定)
+### pickles2/px2-remove-attr v2.0.3 (2019年9月10日)
 
 - PHP 7.3系 で起きるエラーを修正した。
 
-### pickles2/px2-remove-attr 2.0.2 (2018年8月30日)
+### pickles2/px2-remove-attr v2.0.2 (2018年8月30日)
 
 - 細かい不具合の修正。
 
-### pickles2/px2-remove-attr 2.0.1 (2018年3月16日)
+### pickles2/px2-remove-attr v2.0.1 (2018年3月16日)
 
 - 0バイトのコンテンツがある場合に Fatal Error が起きる不具合を修正した。
 
-### pickles2/px2-remove-attr 2.0.0 (2016年2月12日)
+### pickles2/px2-remove-attr v2.0.0 (2016年2月12日)
 
 - initial release.
 
 ## ライセンス - License
 
-Copyright (c)2001-2018 Tomoya Koyanagi, and Pickles 2 Project<br />
+Copyright (c)2001-2019 Tomoya Koyanagi, and Pickles 2 Project<br />
 MIT License https://opensource.org/licenses/mit-license.php
 
 
 ## 作者 - Author
 
 - Tomoya Koyanagi <tomk79@gmail.com>
-- website: <http://www.pxt.jp/>
-- Twitter: @tomk79 <http://twitter.com/tomk79/>
+- website: <https://www.pxt.jp/>
+- Twitter: @tomk79 <https://twitter.com/tomk79/>
