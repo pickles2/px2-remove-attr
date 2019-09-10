@@ -58,6 +58,10 @@ $ composer test
 
 ## 更新履歴 - Change log
 
+### pickles2/px2-remove-attr 2.0.3 (リリース日未定)
+
+- PHP 7.3系 で起きるエラーを修正した。
+
 ### pickles2/px2-remove-attr 2.0.2 (2018年8月30日)
 
 - 細かい不具合の修正。
