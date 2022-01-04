@@ -25,7 +25,7 @@
         "pickles2/broccoli-module-fess": "dev-master",
         "pickles2/broccoli-module-plain-html-elements": "dev-master",
         "pickles2/px2-sitemapexcel": "2.*",
-        "pickles2/px2-px2dthelper": "dev-master",
+        "pickles2/px2-px2dthelper": "2.*",
         "phpunit/phpunit": "~9.5"
     },
     "autoload": {
