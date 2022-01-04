@@ -3,10 +3,10 @@
  * test for tomk79\px-remove-attr
  */
 
-class mainTest extends PHPUnit_Framework_TestCase{
+class mainTest extends PHPUnit\Framework\TestCase{
 	private $fs;
 
-	public function setup(){
+	public function setup() : void{
 		mb_internal_encoding('UTF-8');
 		$this->fs = new tomk79\filesystem();
 	}
