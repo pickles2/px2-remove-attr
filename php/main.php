@@ -29,10 +29,9 @@ class main{
 			return true;
 		}
 
-		if( !@is_array($options->attrs) ){
-			@$options->attrs = array();
+		if( !is_array($options->attrs ?? null) ){
+			$options->attrs = array();
 		}
-		// var_dump($options);
 
 		foreach( $px->bowl()->get_keys() as $key ){
 			$src = $px->bowl()->pull( $key );
@@ -51,7 +50,6 @@ class main{
 				foreach( $options->attrs as $attr ){
 					$ret = $html->find('*['.$attr.']');
 					foreach( $ret as $retRow ){
-						// var_dump($retRow->$attr);
 						$retRow->$attr = null;
 					}
 				}
