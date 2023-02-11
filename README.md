@@ -58,7 +58,7 @@ $ composer test
 
 ## 更新履歴 - Change log
 
-### pickles2/px2-remove-attr v2.1.1 (リリース日未定)
+### pickles2/px2-remove-attr v2.1.1 (2023年2月11日)
 
 - 内部コードの細かい修正。
 
